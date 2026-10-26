@@ -15,10 +15,20 @@ Drive between festival stages to drop sets and sing. The crowd is chasing you th
 
 A little deranged. Festival energy turned feral. Neon, sweat, fire, blood, and bass. Not grimdark for its own sake — chaotic, stylish, and over-the-top.
 
+## Levels
+
+Use `tools/generate_levels.py` to produce any number of levels (default 500):
+
+```bash
+python tools/generate_levels.py --count 500 --out data/levels.json
+```
+
+Each level has: type (drive/stage/hybrid), theme, chase type + intensity, primary weapon, music vibe, deranged twist, drive distance, and rhythm length. Scale as needed for prototype or full jam.
+
 ## Prototype Goals (MegaJam window)
 
 - One vehicle with solid driving feel
-- Two stages with distinct vibes
+- Two stages with distinct vibes (pull from generated levels)
 - Simple data-driven rhythm charts
 - Basic chase AI that reacts to performance score
 - At least one realistic weapon with satisfying feedback
