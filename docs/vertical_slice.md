@@ -89,6 +89,39 @@ Add the mapping context to the player controller or pawn on BeginPlay.
   - Hitscan or simple melee on IA_Fire
   - Can damage or apply impulse to ChaseAI
 
+## Concrete Implementation Sketches
+
+### Rhythm Judgment (Minimal)
+```
+On Rhythm Input (lane):
+  Find closest active note in that lane
+  if time difference < 0.1s → Sick (+100 score, +1.0 performance)
+  else if < 0.2s → Good (+50, +0.5)
+  else if < 0.3s → OK (+25, +0.2)
+  else → Miss (-10, -0.3)
+  Remove the note
+```
+
+PerformanceScore is clamped 0–10 and drives chase intensity.
+
+### Chase Speed Formula
+```
+BaseSpeed = 400
+Speed = BaseSpeed + (PerformanceScore * 80)
+MaxSpeed = 1200
+```
+
+Update every frame or on score change. Higher performance = faster chase.
+
+### Weapon Hitscan (Minimal)
+```
+On Fire:
+  Line trace from camera / muzzle forward 5000 units
+  If hit BP_ChaseAI:
+    Apply damage or impulse backward
+    Optional: temporarily reduce its speed or PerformanceScore
+```
+
 ### Success Criteria for Vertical Slice
 - You can drive around.
 - Enter the stage, hit a few notes, see score go up.
