@@ -15,7 +15,6 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
    - Settings for difficulty, music volume, weapon loadout, visual density
    - Level select or endless mode pulling from the 500
    - Easy to add new themes/weapons via data
-5. **Parallel UEFN island** — Start simplified version in parallel (see docs/uefn_version.md).
 
 ## High Quality Targets
 
@@ -26,27 +25,20 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 
 ## Platform Targets
 
-### Primary — Full Unreal Engine
+### Full Unreal Engine (only track)
 - **Windows PC** free stream build (itch.io or direct download). First and main target.
 - **Xbox Series X|S** later (UE 5.8+ GDK path; requires free ID@Xbox approval for full console).
-- Supports the full vision: custom weird premium characters, realistic weapons, custom vehicle, deep Funky Friday-style rhythm system, data-driven everything.
-
-### Parallel — UEFN version (active)
-- Simplified Fortnite island built alongside the full UE project.
-- Same vibe and core loop idea, adapted to Verse + devices + Fortnite character.
-- Free multiplayer access for streams. See `docs/uefn_version.md` for the adaptation plan.
-- Not a direct port; shares themes, chart concepts, and design docs.
+- Supports the full vision: custom weird premium characters, realistic weapons, custom vehicle, deep Funky Friday-style rhythm system, beat-synced animations, data-driven everything.
 
 ### Contest
-- Totally new project later for the MegaJam (either full UE or UEFN track, decided at the time).
+- Totally new project later for the MegaJam.
 
 ## Stream / Free Release Goals
 
 - Playable full-UE Windows build with 20–50 levels
-- Playable UEFN island for easy multiplayer testing / giveaways
 - Customizable options exposed
 - Dev log / Glass Box style documentation of the process
-- Giveaway on stream once the slices are fun
+- Giveaway on stream once the slice is fun
 
 ## Later (pre-MegaJam and beyond)
 
@@ -54,7 +46,6 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - More weapons, chase types, deranged twists
 - Polish pass, audio, particles
 - Xbox if desired
-- Iterate both UE and UEFN versions
 
 ## Tech Notes
 
@@ -62,4 +53,3 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - Agents for materials, lighting, blueprint iteration, chart generation
 - Keep everything data-driven for modularity
 - Input: keyboard + gamepad from the start so Xbox/PC controller feels native
-- UEFN uses Verse and is a separate, simpler parallel experience
