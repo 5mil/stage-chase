@@ -1,0 +1,15 @@
+{
+  "id": "sample_stage_1",
+  "bpm": 128,
+  "scrollSpeed": 1.2,
+  "notes": [
+    { "time": 0.5, "lane": 0, "type": "tap" },
+    { "time": 1.0, "lane": 2, "type": "tap" },
+    { "time": 1.5, "lane": 1, "type": "hold", "duration": 0.75 },
+    { "time": 2.25, "lane": 3, "type": "tap" },
+    { "time": 2.75, "lane": 0, "type": "tap" },
+    { "time": 3.0, "lane": 1, "type": "tap" },
+    { "time": 3.5, "lane": 2, "type": "tap" },
+    { "time": 4.0, "lane": 3, "type": "hold", "duration": 1.0 }
+  ]
+}
