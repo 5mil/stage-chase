@@ -7,13 +7,17 @@ Drive between festival stages to drop sets and sing. The crowd is chasing you th
 ## Core Loop
 
 1. **Drive** — Navigate roads and festival grounds while music plays. Light rhythm influence on movement (boost on the drop, drift on the beat).
-2. **Arrive & Perform** — Pull up to a stage and enter the rhythm game. Hit notes, holds, and freestyle zones. Performance quality affects crowd love *and* aggression.
+2. **Arrive & Perform** — Pull up to a stage and enter the rhythm game. **Funky Friday / FNF-style four-lane arrow charts** (Left/Down/Up/Right scrolling notes, holds, timing judgments). Performance quality affects crowd love *and* aggression.
 3. **Defend** — Use realistic weapons (pistols, shotguns, melee, improvised festival gear) to keep the chasing crowd, security, or worse off your vehicle and off the stage.
 4. **Escape / Next Stage** — Outrun, outplay, or clear enough space to reach the next venue before the show collapses.
 
 ## Tone
 
 A little deranged. Festival energy turned feral. Neon, sweat, fire, blood, and bass. Not grimdark for its own sake — chaotic, stylish, and over-the-top.
+
+## Rhythm System
+
+Funky Friday style: 4-lane arrows scrolling to receptors. Judgments (Sick/Good/OK/Bad/Miss), holds, accuracy, and combo feed directly into chase intensity. See `docs/rhythm_system.md` for Unreal component sketch and chart format.
 
 ## Levels
 
@@ -29,7 +33,7 @@ Each level has: type (drive/stage/hybrid), theme, chase type + intensity, primar
 
 - One vehicle with solid driving feel
 - Two stages with distinct vibes (pull from generated levels)
-- Simple data-driven rhythm charts
+- Data-driven Funky Friday-style rhythm charts
 - Basic chase AI that reacts to performance score
 - At least one realistic weapon with satisfying feedback
 - Playable vertical slice: drive → perform → defend → drive
