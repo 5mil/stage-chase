@@ -36,6 +36,8 @@ Simple, data-driven format. Store charts in `data/charts/`.
 - `time` / `duration` in seconds from chart start
 - Easy to generate with agents or convert from existing FNF charts
 
+**Custom songs:** See `docs/custom_songs.md` for MP3 import + automatic chart generation.
+
 ## Unreal Component Sketch
 
 Modular, data-driven. Prefer components + data assets.
@@ -90,5 +92,6 @@ Modular, data-driven. Prefer components + data assets.
 - Swap note visuals, judgment windows, and scroll behavior without touching core logic.
 - Can run as full-screen overlay or in-world UI on the stage.
 - Later: multi-key modes, modcharts, character animations synced to hits.
+- Custom MP3 import + auto-mapping supported via the chart format (see custom_songs.md).
 
 This keeps the rhythm system clean, customizable, and ready for the free stream build and later contest version.
