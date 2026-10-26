@@ -48,6 +48,48 @@ Data-driven so new options can be added without code changes.
 - Save / load presets.
 - Stream-friendly: easy to show off wild combinations.
 
+## Beat-Synced Animation
+
+Characters move on screen with the beats during the rhythm performance sections.
+
+### Core Behaviors
+
+- **Idle Performance Loop**
+  - Subtle body sway, head bob, and accessory motion locked to BPM.
+  - Driven by the chart BPM or a Quartz clock / timeline.
+  - Different intensity based on current combo or chase state.
+
+- **Hit Reactions**
+  - On note judgment (Sick / Good / etc.): short additive animation — head snap, shoulder pulse, arm flick, speaker mouth flare, eye glow burst.
+  - Stronger reaction on higher judgments.
+  - Misses can trigger a stumble or glitch stutter.
+
+- **Hold Notes**
+  - Sustained pose or pulsing motion while the hold is active.
+
+- **Material & Accessory Sync**
+  - Emissive intensity, clearcoat, or particle systems pulse on the beat.
+  - Floating rings, extra limbs, or wiring animate in time with the music.
+  - Morph targets on faces (mouth open on vocals, eyes widen on drops).
+
+### Implementation Sketch (Unreal)
+
+- Animation Blueprint with layered states:
+  - Base performance idle (BPM-driven)
+  - Additive hit reactions triggered by RhythmManager events
+  - Blend spaces for intensity
+- Use the existing `URhythmManagerComponent` events (OnNoteHit, OnMiss, OnComboChange) to drive AnimNotifies or direct montage plays.
+- For modular bodies: Leader Pose Component so accessories and variant limbs follow the main skeleton, with optional secondary anims.
+- Optional: Control Rig or simple procedural offsets for floating parts and jiggle.
+- Materials use Custom Primitive Data or Material Parameter Collections updated on the beat for glow pulses.
+
+### Feel Goals
+
+- Characters feel alive and performing, not static models.
+- Movement is stylish and premium — not exaggerated cartoon bounce.
+- Sync is tight enough that good rhythm play makes the character look powerful.
+- Weird anatomy still reads clearly in motion.
+
 ## Technical Notes (Unreal)
 
 - Modular character using Leader Pose or similar for shared animations.
@@ -58,10 +100,10 @@ Data-driven so new options can be added without code changes.
 
 ## Example Directions
 
-- Chrome-skinned figure with too many eyes and a speaker for a mouth.
-- Tall, dripping neon-organic form with floating accessory rings.
-- Porcelain mask face that cracks and glows from inside during high combos.
-- Asymmetrical multi-arm performer with festival wiring growing out of the skin.
+- Chrome-skinned figure with too many eyes and a speaker for a mouth — speaker pulses and eyes track on beats.
+- Tall, dripping neon-organic form with floating accessory rings — rings orbit and body sways.
+- Porcelain mask face that cracks and glows from inside during high combos — cracks pulse brighter on hits.
+- Asymmetrical multi-arm performer with festival wiring growing out of the skin — extra arms gesture on notes.
 
 All options should feel expensive and intentional, not generic or meme-y.
 
