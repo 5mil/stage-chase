@@ -22,6 +22,24 @@ This is Task 1. Goal: a playable drive → perform → defend loop in Unreal Eng
   - Content/Characters
   - Content/Stages
 
+## Enhanced Input Setup (Do This First)
+
+Create Input Actions:
+- IA_Move (Axis2D)
+- IA_Look (Axis2D)
+- IA_RhythmLeft (Digital)
+- IA_RhythmDown (Digital)
+- IA_RhythmUp (Digital)
+- IA_RhythmRight (Digital)
+- IA_Fire (Digital)
+- IA_Boost (Digital) — optional for later
+
+Create Input Mapping Context: IMC_Default
+- Keyboard: WASD for move, Arrow keys or DFJK for rhythm lanes, Left Mouse for fire
+- Gamepad: Left Stick move, D-Pad or Face buttons for rhythm lanes, Right Trigger for fire
+
+Add the mapping context to the player controller or pawn on BeginPlay.
+
 ## Minimal Loop to Build First
 
 ### 1. Player Movement
@@ -45,6 +63,31 @@ This is Task 1. Goal: a playable drive → perform → defend loop in Unreal Eng
 
 ### 5. Basic Weapon
 - One hitscan or melee that can damage or knock back the chase actor.
+
+## First Blueprint Structure (Suggested)
+
+- **BP_PlayerPawn** (or BP_Vehicle)
+  - Enhanced Input component or controller binding
+  - PerformanceScore float (exposed)
+  - Simple movement
+
+- **BP_RhythmManager** (Actor or Component)
+  - Spawns notes on a timer for prototype
+  - Checks input against active notes
+  - Broadcasts OnNoteHit / OnNoteMiss
+  - Updates PerformanceScore on the player
+
+- **BP_StageTrigger** (Trigger Volume)
+  - On Begin Overlap: Enable rhythm mode / show HUD
+  - On End Overlap: Disable rhythm mode
+
+- **BP_ChaseAI**
+  - Simple Follow behavior (AI Move To or direct movement)
+  - Max Speed or Aggression multiplied by player PerformanceScore
+
+- **BP_Weapon** (Component or Actor)
+  - Hitscan or simple melee on IA_Fire
+  - Can damage or apply impulse to ChaseAI
 
 ### Success Criteria for Vertical Slice
 - You can drive around.
