@@ -23,13 +23,31 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - Performance optimized for streaming
 - Clean modular architecture (components, data assets, interfaces)
 
+## Platform Targets
+
+### Primary — Full Unreal Engine (recommended)
+- **Windows PC** free stream build (itch.io or direct download). First and main target.
+- **Xbox Series X|S** later (UE 5.8+ GDK path; requires free ID@Xbox approval for full console).
+- Supports the full vision: custom weird premium characters, realistic weapons, custom vehicle, deep Funky Friday-style rhythm system, data-driven everything.
+- MegaJam contest entry can be this version (Windows build).
+
+### Optional — UEFN version
+- Simplified island remix for the Fortnite ecosystem / MegaJam UEFN track.
+- Uses Fortnite character model + devices + Verse (not full custom characters or unrestricted systems).
+- Possible lighter rhythm + chase experience using existing Fortnite vehicles/props and custom abilities.
+- Separate project; not a direct port. Good for reach and multiplayer, but limited compared to the full UE version.
+- MegaJam allows either UE or UEFN (one per team).
+
+### Not primary
+- Mobile (possible later if optimized).
+- Other consoles.
+
 ## Stream / Free Release Goals
 
-- Playable build with 20–50 hand-picked or generated levels
+- Playable full-UE Windows build with 20–50 levels
 - Customizable options exposed
 - Dev log / Glass Box style documentation of the process
 - Giveaway on stream once the slice is fun
-- Primary target: Windows PC (itch.io or direct download)
 
 ## Later (pre-MegaJam and beyond)
 
@@ -37,7 +55,8 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - More weapons, chase types, deranged twists
 - Polish pass, audio, particles
 - Contest version can fork or reuse the modular core
-- **Xbox (Series X|S)**: Possible later target. Unreal Engine supports it (UE 5.8+ has public GDK plugins for Xbox on PC; full console requires free ID@Xbox program approval). Not a jam submission target (MegaJam is PC/mobile/UEFN). Controller support is already planned via Enhanced Input.
+- Xbox if desired
+- Optional UEFN island if we want Fortnite reach
 
 ## Tech Notes
 
@@ -45,3 +64,4 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - Agents for materials, lighting, blueprint iteration, chart generation
 - Keep everything data-driven for modularity
 - Input: keyboard + gamepad from the start so Xbox/PC controller feels native
+- UEFN (if pursued) uses Verse and is a separate, simpler experience
