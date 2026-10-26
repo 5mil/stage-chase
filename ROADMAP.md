@@ -29,16 +29,19 @@ Free high-quality modular release for the stream. Test skills before the MegaJam
 - Customizable options exposed
 - Dev log / Glass Box style documentation of the process
 - Giveaway on stream once the slice is fun
+- Primary target: Windows PC (itch.io or direct download)
 
-## Later (pre-MegaJam)
+## Later (pre-MegaJam and beyond)
 
 - Expand to full 500 or procedural runtime generation
 - More weapons, chase types, deranged twists
 - Polish pass, audio, particles
 - Contest version can fork or reuse the modular core
+- **Xbox (Series X|S)**: Possible later target. Unreal Engine supports it (UE 5.8+ has public GDK plugins for Xbox on PC; full console requires free ID@Xbox program approval). Not a jam submission target (MegaJam is PC/mobile/UEFN). Controller support is already planned via Enhanced Input.
 
 ## Tech Notes
 
-- Unreal Engine (prefer 5.8+ for MCP)
+- Unreal Engine (prefer 5.8+ for MCP and easier Xbox on PC path)
 - Agents for materials, lighting, blueprint iteration, chart generation
 - Keep everything data-driven for modularity
+- Input: keyboard + gamepad from the start so Xbox/PC controller feels native
